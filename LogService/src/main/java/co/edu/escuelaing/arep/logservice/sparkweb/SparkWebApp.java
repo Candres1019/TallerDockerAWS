@@ -19,9 +19,9 @@ public class SparkWebApp {
      */
     public static void main(String[] args) {
         port(getPort());
-        staticFiles.location("/insertar-mensajes");
+        staticFiles.location("/static");
         init();
-        post("/insertar-mensajes", (request, response) -> {
+        post("/insertar", (request, response) -> {
             response.status(200);
             response.type("application/json");
             JSONObject jsonObject = new JSONObject(request.body());

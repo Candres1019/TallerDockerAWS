@@ -59,19 +59,21 @@ public class MongoDataBaseConnection implements DataBaseConnection {
      */
     @Override
     public String consultarMensajes() {
-        StringBuilder jsonData = new StringBuilder("{ \"Mensajes\": [");
+        StringBuilder jsonData = new StringBuilder("{\"mensajes\": [");
         int cont = 0;
         FindIterable<Document> resultados = coleccion.find().sort(Sorts.descending("Fecha"));
         for (Document document : resultados) {
             String jsonMini = "";
             if (cont < 10) {
-                jsonMini = "{\"Mensaje\": \"" + document.get("Mensaje") + "\", \"Fecha\": \"" + document.get("Fecha") + "\"}";
+                jsonMini = "{\"mensaje\": \"" + document.get("Mensaje") + "\", \"fecha\": \"" + document.get("Fecha") + "\"},";
                 jsonData.append(jsonMini);
             }
             cont = cont + 1;
         }
-        jsonData.append("]}");
-        return jsonData.toString();
+        String temp = jsonData.toString();
+        String newTemp = temp.substring(0, temp.length()-1);
+        newTemp += "]}";
+        return newTemp;
     }
 
 }
