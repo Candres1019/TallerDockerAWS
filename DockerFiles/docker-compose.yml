@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  db:
+    image: mongo:latest
+    container_name: mongo-docker-database
+    environment:
+      MONGO_INITDB_DATABASE: ArepDockerDB
+      MONGO_INITDB_ROOT_USERNAME: andres
+      MONGO_INITDB_ROOT_PASSWORD: Candres1019
+    volumes:
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+      - mongodb:/data/db
+      - mongodb_config:/data/configdb
+    ports:
+      - 27017:27017
+
+    command: mongod
+volumes:
+  mongodb:
+  mongodb_config:
