@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
     <!-- Script necesarios para funcionamiento -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../js/app.js"></script>
     <!-- Titulo -->
     <title>Laboratorio Docker Aws</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link href="img/favicon.ico" rel="icon" type="image/x-icon"/>
     <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <script crossorigin="anonymous" src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script>
     <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+          type="text/css"/>
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="../css/style.css" rel="stylesheet" />
-
+    <link href="../css/style.css" rel="stylesheet"/>
 </head>
 <body id="page-top">
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Laboratorio Docker Aws</a>
-        <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded"
+                data-target="#navbarResponsive"
+                data-toggle="collapse" type="button">
             Menu
             <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contacto</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                                                     href="#contact">Contacto</a></li>
             </ul>
         </div>
     </div>
@@ -52,21 +59,24 @@
         <!-- Contact Section Form-->
         <div class="row">
             <div class="col-lg-8 mx-auto">
-                <form id="contactForm" name="sentMessage" >
+                <form id="contactForm" name="sentMessage">
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
                             <label>Datos</label>
-                            <label for="mensaje"></label><input class="form-control" id="mensaje" type="text" placeholder="Mensaje"/>
+                            <label for="mensaje"></label><input class="form-control" id="mensaje" placeholder="Mensaje"
+                                                                type="text"/>
                             <p class="help-block text-danger"></p>
-                            <button class="btn btn-primary" id="sendButton" type="button" onclick="app.insertarMensaje()">Insertar</button>
+                            <button class="btn btn-primary" id="sendButton" onclick="app.insertarMensaje()"
+                                    type="button">Insertar
+                            </button>
                         </div>
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <table class="table">
+                            <table class="table" id="table-mensajes">
                                 <thead>
-                                    <tr>
-                                        <th>Mensaje: </th>
-                                        <th>Fecha: </th>
-                                    </tr>
+                                <tr>
+                                    <th>Mensaje:</th>
+                                    <th>Fecha:</th>
+                                </tr>
                                 </thead>
                                 <tbody>
                                 </tbody>
@@ -95,10 +105,15 @@
             <!-- Footer Social Icons-->
             <div class="col-lg-4 mb-5 mb-lg-0">
                 <h4 class="text-uppercase mb-4">Contacto</h4>
-                <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/Candres1019"><i class="fab fa-fw fa-github"></i></a>
-                <a class="btn btn-outline-light btn-social mx-1" href="mailto: andres.calderon-o@mail.escuelaing.edu.co"><i class="far fa-envelope"></i></a>
-                <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/andres-mateo-calderón-ortega"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                <a class="btn btn-outline-light btn-social mx-1" href="https://wa.me/573174414419"><i class="fab fa-fw fa-whatsapp"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/Candres1019"><i
+                        class="fab fa-fw fa-github"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1"
+                   href="mailto: andres.calderon-o@mail.escuelaing.edu.co"><i class="far fa-envelope"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1"
+                   href="https://www.linkedin.com/in/andres-mateo-calderón-ortega"><i
+                        class="fab fa-fw fa-linkedin-in"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" href="https://wa.me/573174414419"><i
+                        class="fab fa-fw fa-whatsapp"></i></a>
             </div>
             <!-- Footer About Text-->
             <div class="col-lg-4">
@@ -113,7 +128,8 @@
 </footer>
 <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
 <div class="scroll-to-top d-lg-none position-fixed">
-    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i
+            class="fa fa-chevron-up"></i></a>
 </div>
 <!-- Bootstrap core JS-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

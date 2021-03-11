@@ -1,11 +1,11 @@
 db.createUser(
     {
         user: "admin",
-        pwd: "Candres1019",
+        pwd: "12345asd",
         roles: [
             {
                 role: "readWrite",
-                db: "ArepDockerDB"
+                db: "LabArepDocker"
             }
         ]
     }

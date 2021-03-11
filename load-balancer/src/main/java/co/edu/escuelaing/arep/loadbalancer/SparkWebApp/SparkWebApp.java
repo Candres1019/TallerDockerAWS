@@ -1,6 +1,7 @@
 package co.edu.escuelaing.arep.loadbalancer.SparkWebApp;
 
-import org.json.JSONObject;
+import co.edu.escuelaing.arep.loadbalancer.APIConnection.LogServiceAPI;
+import com.google.gson.Gson;
 
 import static spark.Spark.*;
 
@@ -16,8 +17,12 @@ public class SparkWebApp {
         port(getPort());
         staticFiles.location("/static");
         init();
-//        post("/insertarMensajes", (request, response) -> {
-//        });
+        post("/insertarMensajes", (request, response) -> {
+            response.status(200);
+            response.type("application/json");
+            String respuesta = LogServiceAPI.getInstance().consultarMensajes(request.body());
+            return new Gson().toJson(respuesta);
+        });
     }
 
     /**
@@ -30,6 +35,6 @@ public class SparkWebApp {
         if (System.getenv("PORT") != null) {
             return Integer.parseInt(System.getenv("PORT"));
         }
-        return 8088;
+        return 8080;
     }
 }

@@ -1,13 +1,25 @@
 version: '3'
 
 services:
+  web:
+    build:
+      context: ../LogService
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    ports:
+      - "35001:6000"
+      - "35002:6000"
+      - "35003:6000"
+    networks:
+      - tallerdockernet
   db:
     image: mongo:latest
     container_name: mongo-docker-database
     environment:
-      MONGO_INITDB_DATABASE: ArepDockerDB
+      MONGO_INITDB_DATABASE: LabArepDocker
       MONGO_INITDB_ROOT_USERNAME: andres
-      MONGO_INITDB_ROOT_PASSWORD: Candres1019
+      MONGO_INITDB_ROOT_PASSWORD: 12345asdSS
     volumes:
       - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
       - mongodb:/data/db
@@ -16,6 +28,11 @@ services:
       - 27017:27017
 
     command: mongod
+
+networks:
+  tallerdockernet:
+    external:
+      name: dockerarep
 volumes:
   mongodb:
   mongodb_config:
