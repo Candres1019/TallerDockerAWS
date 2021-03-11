@@ -14,7 +14,7 @@ import java.nio.charset.StandardCharsets;
 public class LogServiceAPI {
 
     public static final LogServiceAPI _instance = new LogServiceAPI();
-    private static final String path = "http://localhost:";
+    private static final String path = "http://172.17.0.1:";
     private static final String solicitud = "/insertar";
     private static Integer numDocker = -1;
     private final String[] ports = {"35001", "35002", "35003"};

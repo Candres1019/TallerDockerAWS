@@ -43,7 +43,9 @@ public class MongoDataBaseConnection implements DataBaseConnection {
     @Override
     public void insertMensaje(String mensaje) {
         try {
+            int totalDoc = Math.toIntExact(coleccion.count());
             Map<String, Object> document = new HashMap<String, Object>();
+            document.put("Id", totalDoc + 1);
             document.put("Mensaje", mensaje);
             document.put("Fecha", new Date().toString());
             coleccion.insertOne(new Document(document));
@@ -61,17 +63,18 @@ public class MongoDataBaseConnection implements DataBaseConnection {
     public String consultarMensajes() {
         StringBuilder jsonData = new StringBuilder("{\"mensajes\": [");
         int cont = 0;
-        FindIterable<Document> resultados = coleccion.find().sort(Sorts.descending("Fecha"));
+        FindIterable<Document> resultados = coleccion.find().sort(Sorts.descending("Id"));
         for (Document document : resultados) {
             String jsonMini = "";
             if (cont < 10) {
+                System.out.println(document.get("Mensaje") + " " + document.get("Fecha"));
                 jsonMini = "{\"mensaje\": \"" + document.get("Mensaje") + "\", \"fecha\": \"" + document.get("Fecha") + "\"},";
                 jsonData.append(jsonMini);
             }
             cont = cont + 1;
         }
         String temp = jsonData.toString();
-        String newTemp = temp.substring(0, temp.length()-1);
+        String newTemp = temp.substring(0, temp.length() - 1);
         newTemp += "]}";
         return newTemp;
     }

@@ -1,18 +1,26 @@
 version: '3'
 
 services:
+  loadbalancer:
+    build:
+      context: ../load-balancer
+      dockerfile: Dockerfile
+    depends_on:
+      - web
+    container_name: loadbalancerdocker
+    ports:
+      - "8080:6000"
   web:
     build:
       context: ../LogService
       dockerfile: Dockerfile
     depends_on:
       - db
+    container_name: logservicedocker
     ports:
       - "35001:6000"
       - "35002:6000"
       - "35003:6000"
-    networks:
-      - tallerdockernet
   db:
     image: mongo:latest
     container_name: mongo-docker-database
@@ -29,10 +37,6 @@ services:
 
     command: mongod
 
-networks:
-  tallerdockernet:
-    external:
-      name: dockerarep
 volumes:
   mongodb:
   mongodb_config:

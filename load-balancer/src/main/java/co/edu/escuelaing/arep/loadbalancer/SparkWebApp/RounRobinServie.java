@@ -5,7 +5,7 @@ import com.google.gson.Gson;
 
 import static spark.Spark.*;
 
-public class SparkWebApp {
+public class RounRobinServie {
 
     /**
      * Metodo principal encargado realziar la inicicion y el llamado html, para enviar
