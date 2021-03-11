@@ -5,7 +5,7 @@ app = (function () {
         var cadena = {"mensaje":$("#mensaje").val()};
         console.log(cadena);
         const promise = $.post({
-            url: "http://localhost:8080/insertarMensajes",
+            url: "/insertarMensajes",
             data: JSON.stringify(cadena),
             contentType: "application/json"
         });
