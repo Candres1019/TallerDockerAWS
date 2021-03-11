@@ -28,7 +28,7 @@ Adicionalmente se recomienda tener descargado los siguientes programas:
 
 ### Despliegue en AWS
 
-[![Deployed to AWS](./Img/aws.png)](enlacexd)
+[![Deployed to AWS](./Img/aws.png)](http://ec2-3-85-44-175.compute-1.amazonaws.com:8080/)
 
 ### Calidad del código
 
