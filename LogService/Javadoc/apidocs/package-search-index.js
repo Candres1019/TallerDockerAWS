@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"co.edu.escuelaing.arep.logservice.persistence"},{"l":"co.edu.escuelaing.arep.logservice.persistence.impl"},{"l":"co.edu.escuelaing.arep.logservice.sparkweb"}]

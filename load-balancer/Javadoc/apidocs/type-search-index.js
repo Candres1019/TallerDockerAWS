@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"co.edu.escuelaing.arep.loadbalancer.APIConnection","l":"LogServiceAPI"},{"p":"co.edu.escuelaing.arep.loadbalancer.SparkWebApp","l":"RounRobinServie"}]
