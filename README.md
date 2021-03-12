@@ -30,28 +30,25 @@ Adicionalmente se recomienda tener descargado los siguientes programas:
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/de62cdfebf7345b29fbe4e9b536863f6)](https://www.codacy.com/gh/Candres1019/TallerDockerAWS/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Candres1019/TallerDockerAWS&amp;utm_campaign=Badge_Grade)
 
-### Integración Continua
-
-[![CircleCI](https://circleci.com/gh/Candres1019/TallerArquitecturas-IOC-Reflexion.svg?style=svg)](https://app.circleci.com/pipelines/github/Candres1019/TallerArquitecturas-IOC-Reflexion)
-
 ### Despliegue en AWS
 
 [![Deployed to AWS](./Img/aws.png)](http://ec2-3-85-44-175.compute-1.amazonaws.com:8080/)
 
-1. Pagina Principal del despliegue:
+1. Página Principal del despliegue:
 
    > ![](./Img/despliegue1.PNG)
 
-2. Resultado despues de enviar el primer mensaje:
+2. Resultado después de enviar el primer mensaje:
 
    > ![](./Img/despliegue2.PNG)
 
-3. Resultado despues de enviar el segundo mensaje:
+3. Resultado después de enviar el segundo mensaje:
 
    > ![](./Img/despliegue3.PNG)
 
-4. Imagenes docker corriendo dentro la maquina en AWS:
+4. Imágenes Docker corriendo dentro la máquina en AWS:
 
+   > ![](./Img/despliegue4.png)
 
 ### Instalación
 
@@ -66,7 +63,7 @@ Adicionalmente se recomienda tener descargado los siguientes programas:
     * Para **Descargar** el proyecto de click [aquí](https://github.com/Candres1019/TallerDockerAWS/archive/master.zip),
       la descarga comenzara de manera automática.
 
-2. En una ventana de comandos ejecute el siguiente comando, dentro de la carpeta de cada uno de los proyectos.
+2. En una ventana de comandos, ejecute el siguiente comando, dentro de la carpeta de cada uno de los proyectos.
 
     - LogService
     - load-balancer
@@ -109,8 +106,8 @@ Adicionalmente se recomienda tener descargado los siguientes programas:
 
 En una ventana de comandos, utilice el siguiente comando en cada uno de los directorios:
 
-   - LogService
-   - load-balancer
+- LogService
+- load-balancer
 
    ```
     mvn test
