@@ -12,7 +12,7 @@ en la base de datos.
     - [LogServie](./LogService/Javadoc/apidocs)
     - [load-balancer](./load-balancer/Javadoc/apidocs)
 
-* Haga click [aqui]() para ver el reporte del proyecto.
+* Haga click [aqui](TallerDockerAWS.pdf) para ver el reporte del proyecto.
 
 ### Pre-Requisitos
 
@@ -31,8 +31,6 @@ Adicionalmente se recomienda tener descargado los siguientes programas:
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/de62cdfebf7345b29fbe4e9b536863f6)](https://www.codacy.com/gh/Candres1019/TallerDockerAWS/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Candres1019/TallerDockerAWS&amp;utm_campaign=Badge_Grade)
 
 ### Despliegue en AWS
-
-[![Deployed to AWS](./Img/aws.png)](http://ec2-3-85-44-175.compute-1.amazonaws.com:8080/)
 
 1. Página Principal del despliegue:
 
@@ -140,6 +138,7 @@ En una ventana de comandos, utilice el siguiente comando en cada uno de los dire
 * [JUnit](https://junit.org/junit5/) - Pruebas de Unidad.
 * [Maven](https://maven.apache.org/) - Manejo de dependecias.
 * [IntelliJ IDEA](https://www.jetbrains.com/es-es/idea/) - Entorno de Desarrollo.
+* [Docker](https://docs.docker.com/) - Contenedor de Software.
 
 ## Authors
 
