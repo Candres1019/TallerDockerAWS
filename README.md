@@ -62,6 +62,8 @@ Adicionalmente se recomienda tener descargado los siguientes programas:
 
     * Para **Descargar** el proyecto de click [aquí](https://github.com/Candres1019/TallerDockerAWS/archive/master.zip),
       la descarga comenzara de manera automática.
+      
+    > ![](./Img/paso1.png)
 
 2. En una ventana de comandos, ejecute el siguiente comando, dentro de la carpeta de cada uno de los proyectos.
 
@@ -71,7 +73,14 @@ Adicionalmente se recomienda tener descargado los siguientes programas:
    ```
     mvn package
     ```
-
+   > LogService
+   > 
+   > ![](./Img/paso2.2.png)
+   > 
+   > load-balancer
+   > 
+   > ![](./Img/paso2.1.png)
+   
 3. Para ejecutar la aplicación de manera local utilizamos en la ventana de comandos el siguiente comando dentro del
    directorio DockerFiles:
 
@@ -79,6 +88,14 @@ Adicionalmente se recomienda tener descargado los siguientes programas:
     > docker-compose up -d
     > ```
 
+   > Inicio del comando
+   > 
+   > ![](./Img/parte3.1.png)
+   > 
+   > Final del comando
+   > 
+   > ![](./Img/parte3.2.png)
+   
 4. Para verificar que todo esté funcionando de manera correcta ejecutamos el siguiente comando:
 
    > ```
@@ -87,7 +104,7 @@ Adicionalmente se recomienda tener descargado los siguientes programas:
 
    debería ver algo similar a lo siguiente en la ventana de comandos:
 
-   > ![](./Img/correctoFun.png)
+   > ![](./Img/parte4.png)
 
 5. Para ver el aplicativo web de manera local ingresamos al siguiente enlace:
 
@@ -95,6 +112,10 @@ Adicionalmente se recomienda tener descargado los siguientes programas:
     > http://localhost:8080/
     > ```
 
+   > Visualización:
+   > 
+   > ![](./Img/parte5.png)
+   
 6. Por defecto se creó la documentación JavaDoc y fue dejada en el directorio /Javadoc, si desea generar uno nuevo
    utilice el siguiente comando, esta documentación quedará en el directorio /target/site/apidocs :
 
