@@ -26,10 +26,6 @@ Adicionalmente se recomienda tener descargado los siguientes programas:
 
 > * [Como Instalar Git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
-### Despliegue en AWS
-
-[![Deployed to AWS](./Img/aws.png)](http://ec2-3-85-44-175.compute-1.amazonaws.com:8080/)
-
 ### Calidad del código
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/de62cdfebf7345b29fbe4e9b536863f6)](https://www.codacy.com/gh/Candres1019/TallerDockerAWS/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Candres1019/TallerDockerAWS&amp;utm_campaign=Badge_Grade)
@@ -37,6 +33,25 @@ Adicionalmente se recomienda tener descargado los siguientes programas:
 ### Integración Continua
 
 [![CircleCI](https://circleci.com/gh/Candres1019/TallerArquitecturas-IOC-Reflexion.svg?style=svg)](https://app.circleci.com/pipelines/github/Candres1019/TallerArquitecturas-IOC-Reflexion)
+
+### Despliegue en AWS
+
+[![Deployed to AWS](./Img/aws.png)](http://ec2-3-85-44-175.compute-1.amazonaws.com:8080/)
+
+1. Pagina Principal del despliegue:
+
+   > ![](./Img/despliegue1.PNG)
+
+2. Resultado despues de enviar el primer mensaje:
+
+   > ![](./Img/despliegue2.PNG)
+
+3. Resultado despues de enviar el segundo mensaje:
+
+   > ![](./Img/despliegue3.PNG)
+
+4. Imagenes docker corriendo dentro la maquina en AWS:
+
 
 ### Instalación
 
@@ -77,8 +92,7 @@ Adicionalmente se recomienda tener descargado los siguientes programas:
 
    > ![](./Img/correctoFun.png)
 
-5. Para ver el aplicativo web de manera local ingresamos al siguiente enlace, dentro de este enlace encontrará los
-   botones para realizar las acciones específicas (ver imagen, ver js, ver css, ver datos, insertar datos):
+5. Para ver el aplicativo web de manera local ingresamos al siguiente enlace:
 
    > ```
     > http://localhost:8080/
